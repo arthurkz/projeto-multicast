@@ -9,10 +9,10 @@
   
         <nav role="navigation" class="probootstrap-nav hidden-xs">
           <ul class="probootstrap-main-nav"> 
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Podcasts</a></li>
-            <li><a href="services.html">Cadastrar</a></li>
-            <li><a href="about.html">Sobre</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['/']">Home</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['/podcasts']" >Podcasts</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['/login']" >Cadastrar</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['/about']" >Sobre</a></li>
           </ul>
           <ul class="probootstrap-right-nav hidden-xs">
             <li><a href="#"><i class="icon-twitter"></i></a></li>
