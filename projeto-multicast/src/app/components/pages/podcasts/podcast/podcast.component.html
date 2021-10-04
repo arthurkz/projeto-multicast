@@ -1,0 +1,10 @@
+<div class="probootstrap-card">
+  <div class="probootstrap-card-media">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active" ><img [src]="podcast.imagem" class="img-responsive img-border" alt="Free HTML5 Template by uicookies.com"></a>
+  </div>
+  <div class="probootstrap-card-text">
+    <h2 class="probootstrap-card-heading mb0">{{ podcast.nome }}</h2>
+    <p class="category">{{ podcast.genero }}</p>
+    <p>{{ podcast.descricao }}</p>
+  </div>
+</div>

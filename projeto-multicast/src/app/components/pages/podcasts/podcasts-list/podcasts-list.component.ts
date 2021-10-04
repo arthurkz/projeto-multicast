@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Podcast } from 'src/app/model/podcast.model';
+import { PodcastsService } from 'src/app/services/podcast-service/podcasts.service';
 
 @Component({
   selector: 'app-podcasts-list',
   templateUrl: './podcasts-list.component.html',
   styleUrls: ['./podcasts-list.component.css']
 })
+
 export class PodcastsListComponent implements OnInit {
 
-  constructor() { }
+  podcasts!: Podcast[]
+
+  constructor(private podcastService: PodcastsService) { }
 
   ngOnInit(): void {
+    this.podcasts = this.podcastService.podcasts();
   }
 
 }

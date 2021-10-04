@@ -1,0 +1,34 @@
+<section class="probootstrap-slider flexslider">
+    <ul class="slides">
+      <li style="background-image: url(../../../assets/img/slider_1.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="slides-text probootstrap-animate">
+                <h2>Nossos Podcasts de cada dia</h2>
+                <p>Aqui você encontra os melhores podcasts com diversos temas e conteúdos para você poder navegar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>       
+
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 section-heading probootstrap-animate">
+          <h2>Os melhores da semana</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-6 probootstrap-animate" *ngFor="let podcast of podcasts">
+          <app-podcast [podcast]="podcast" ></app-podcast>
+          <div class="clearfix visible-sm-block" *ngIf="podcast.id % 2 == 0"></div>
+        </div>
+      </div> 
+    </div>
+  </section>
+
