@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { LayoutComponent } from './components/pages/layout/layout.component';
 import { PodcastComponent } from './components/pages/podcasts/podcast/podcast.component';
 
 import { PodcastsService } from './services/podcast-service/podcasts.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -33,7 +35,10 @@ import { PodcastsService } from './services/podcast-service/podcasts.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [PodcastsService],
   bootstrap: [AppComponent]

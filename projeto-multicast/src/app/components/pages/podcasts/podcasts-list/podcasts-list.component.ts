@@ -10,12 +10,17 @@ import { PodcastsService } from 'src/app/services/podcast-service/podcasts.servi
 
 export class PodcastsListComponent implements OnInit {
 
-  podcasts!: Podcast[]
+  podcasts: Podcast[] = []
 
-  constructor(private podcastService: PodcastsService) { }
+  constructor(private podcastService: PodcastsService) { 
+      this.podcastService.podcasts().subscribe(
+        podcast => {
+          this.podcasts = podcast;
+        }
+      )
+  }
 
   ngOnInit(): void {
-    this.podcasts = this.podcastService.podcasts();
   }
 
 }

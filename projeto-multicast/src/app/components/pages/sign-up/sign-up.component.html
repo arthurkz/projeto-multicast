@@ -5,14 +5,14 @@
           <div class="row">
             <div class="col-md-6">
               <div class="card">
-                <form onsubmit="event.preventDefault()" class="box">
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()" class="box">
                   <h1>Login</h1>
                   <p class="text-muted">Cadastre-se no site!</p>
-                  <input type="text" name="" placeholder="Primeiro Nome"> 
-                  <input type="text" name="" placeholder="Segundo Nome">
-                  <input type="text" name="" placeholder="username"> 
-                  <input type="password" name="" placeholder="Senha"> 
-                  <input type="submit" name="" value="Cadastrar" [routerLink]="['/podcasts']">
+                  <input  formControlName="primeiroNome" type="text" name="" placeholder="Primeiro Nome"> 
+                  <input  formControlName="segundoNome" type="text" name="" placeholder="Segundo Nome">
+                  <input  formControlName="username" type="text" name="" placeholder="Username"> 
+                  <input  formControlName="senha" type="password" name="" placeholder="Senha"> 
+                  <input type="submit" name="" value="Cadastrar">
                 </form>
               </div>
             </div>
